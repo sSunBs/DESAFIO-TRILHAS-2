@@ -8,6 +8,8 @@
 
 [x] **PDF Resumo do Projeto** para Portfólio (novo item obrigatório)
 
+[x] Vídeo de Apresentação do Projeto
+
 ## Dupla
 
 1. Tiago Cardoso Ferreira
