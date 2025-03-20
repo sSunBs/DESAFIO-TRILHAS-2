@@ -3,7 +3,9 @@
 ## Documentos Enviados
 
 [x] Documento de requisitos (PDF, DOCX ou Google Docs)
+
 [x] Arquivos HTML e CSS (e JS, se houver)
+
 [x] **PDF Resumo do Projeto** para Portfólio (novo item obrigatório)
 
 ## Dupla
