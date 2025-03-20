@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* { 
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background: lightgray;
+    background-image: url('Imagens/Ce.svg');
+	background-position: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    text-align: center;
+}
+
+#logo{
+    width: 40vw;
+    height: auto;
+}
+
+.shalala{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#icones{
+    width: 20vw;
+    height: auto; 
+}
+
+
+a{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    width: 200px;
+    height: 41px;
+    flex-shrink: 0;
+    font-size: 25px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+}
+
+:root {
+    --seta-e: url('Imagens/Flecha Esquerda.png');
+    --seta-d: url('Imagens/Flecha Direita.png');
+}
+
+.seta-e {
+    content: var(--seta-e);
+}
+.seta-d {
+    content: var(--seta-d);
+}
+
+.setas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-content: center;    
+}

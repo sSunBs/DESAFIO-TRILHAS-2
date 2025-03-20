@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('Imagens/BackGround.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img{
+    width: 300px;
+    margin-left: 120px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 320px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.botao-esquerda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botao-direita{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+    transition: background 0.3s;
+}
+
+/* Botão com animação para a direita */
+.botao-direita {
+    background-color: transparent;
+}
+
+.botao-direita::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: transparent;
+    transition: left 0.4s;
+}
+
+.botao-direita:hover::after {
+    left: 100%;
+}
+
+/* Botão com animação para a esquerda */
+/*Ideia descartada*/
+.botao-esquerda {
+    background-color: transparent;
+}
+
+.botao-esquerda::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background: transparent;
+    transition: right 0.4s;
+}
+
+.botao-esquerda:hover::after {
+    right: 100%;
+}
+
+.aceito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+a{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+/* Esconde a checkbox padrão */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estiliza o contêiner da checkbox */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    gap: 20px;
+}
+
+/* Cria um quadrado estilizado para substituir a checkbox */
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2135A6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+/* Ícone de check (inicialmente invisível) */
+.checkbox-custom::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    display: none;
+}
+
+/* Aplica estilos quando a checkbox está marcada */
+input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: #F3541C;
+    border-color: #F3541C;
+}
+
+/* Exibe o ícone de check quando marcada */
+input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+}
+
+/* Efeito ao passar o mouse */
+.checkbox-label:hover .checkbox-custom {
+    border-color: #F3541C;
+}

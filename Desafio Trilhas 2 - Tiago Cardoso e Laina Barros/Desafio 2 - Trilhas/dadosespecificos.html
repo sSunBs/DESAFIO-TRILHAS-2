@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dadosespecificos.css" />
+    <link rel="icon" type="image/svg" href="Imagens/Trilhas icon.svg">
+    <title>Registro de Usuário - Trilhas - Dados Específicos</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <section class="logo">
+                <img src="Imagens/Logo%20-%20header.svg" alt="Logo do Trilhas azul e laranja">
+            </section>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form">
+
+            <div class="form-tittle">
+                <img class="s-azul-es">
+                <h2>Dados Específicos</h2>
+                <img class="s-azul-di">
+            </div>
+            
+
+                <div class="input-group">
+                    <div class="input-box-fa">
+                        <label for="formacaoacademica">Formação Acadêmica</label>
+                        <input id="formacaoacademica" type="text" name="formacaocademica" placeholder="Sua formação" required>
+                    </div>
+
+                    <div class="input-group-ex">
+                        <label for="experienciaprofissional">Experiência Profissional</label>
+                        <input id="experienciaprofissional" type="text" name="expprofissional" placeholder="Seu Antigo Trabalho" required>
+                    </div>
+                    
+
+                    <div class="input-group-DH">
+                        <h3>Disponibilidade de Horário</h3>
+                        <div class="marques">
+                            <label class="checkbox-block" for="manha">
+                                <input id="manha" type="checkbox" name="disponibilidade[]" value="manha">
+                                <span>Manhã</span>
+                            </label>
+                    
+                            <label class="checkbox-block" for="tarde">
+                                <input id="tarde" type="checkbox" name="disponibilidade[]" value="tarde">
+                                <span>Tarde</span>
+                            </label>
+                    
+                            <label class="checkbox-block" for="noite">
+                                <input id="noite" type="checkbox" name="disponibilidade[]" value="noite">
+                                <span>Noite</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-group-CM">
+                        <label id="CM" for="cartamotivacao">Carta Motivação</label>
+                        <textarea id="cartamotivacao" type="text" name="cartamotivacao" placeholder="Escreva sua Carta de Motivação" rows="5"></textarea>
+                    </div>
+
+                <section class="uploads">
+                    <div class="input-group-CE">
+                        <label for="comprovantedeescolaridade">Comprovante de Escolaridade</label>
+                        <label class="custom-file-upload-CE">
+                            <input id="comprovantedeescolaridade" type="file" name="diploma" accept=".pdf" required>
+                            Escolher arquivo
+                        </label>
+                    </div>
+                    
+                    <div class="input-group-CEP">
+                        <label id="CEP" for="carteiradetrabalho">Comprovante de Exp.Profissional</label>
+                        <label class="custom-file-upload-CEP">
+                            <input class="carteiradetrabalho" type="file" name="emprego" accept=".pdf" required>
+                            Escolher arquivo
+                        </label>
+                    </div>
+                </section>
+                    
+
+                <div class="setas">
+                    <img class="seta-e">
+                    <a href="confirmacao.html">Confirmar</a>
+                    <img class="seta-d">
+                </div>
+            </form>
+        </div> 
+    </div>
+</body>
+</html>
