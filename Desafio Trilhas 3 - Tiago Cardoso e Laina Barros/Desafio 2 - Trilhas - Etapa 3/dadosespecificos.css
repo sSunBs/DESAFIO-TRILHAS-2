@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-tittle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 25px;
+    gap: 5px;
+    align-content: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('Imagens/BackGround.svg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 3px solid #F3541C;
+}
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img{
+    width: 300px;
+    margin-left: 90px;
+}
+
+.container {
+    margin-top: 15px;
+    width: 80%;
+    max-width: 1000px;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.form {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    border: 5px solid #F3541C;
+    border-radius: 25px;
+}
+
+.form-header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    align-content: center;
+}
+
+.input-group{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.input-box-fa, .input-group-ex, .input-group-DH {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+    width: 100%;
+}
+
+.input-box-fa input, .input-group-ex input {
+    margin: 0.6rem 0;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #2135A6;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 15px;
+    border-style: dashed;
+}
+
+/* Adicionando a borda laranja quando o campo recebe foco */
+.input-box-fa input:focus, .input-group-ex input:focus {
+    border: 2px solid #F3541C; /* Borda laranja */
+    border-style: dashed;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group-DH {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+
+.marques {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2135A6;
+}
+
+.checkbox-block {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-block input {
+    display: none;
+}
+
+.checkbox-block span {
+    display: block;
+}
+
+.checkbox-block:hover {
+    border-color: #F3541C;
+}
+
+.checkbox-block input:checked + span {
+    color: #F3541C;
+}
+
+.input-group-CM{
+    margin-top: 15px;
+}
+
+.input-group-CM label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea{
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border: 2px solid #2135A6;
+    box-shadow: 1px 1px 3px black;
+    border-style: dashed;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+}
+
+textarea:focus{
+    /* Borda laranja */
+    border: 2px dashed #F3541C;
+    outline: none; /* Remove o contorno padrão */
+    transition: border-color 0.3s ease;
+}
+
+.uploads{
+    display: flex;
+    flex-direction: row; /* Alinha os botões lado a lado */
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre os botões */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    width: 100%;
+}
+
+.input-group-CE, .input-group-CEP {
+    width: 48%;
+}
+
+.custom-file-upload-CE, .custom-file-upload-CEP {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    color: #2135A6;
+    background-color: transparent;
+    border-color: #2135A6;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 50px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.uploads input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload-CE:hover, .custom-file-upload-CEP:hover {
+    color: #F3541C; /* Muda a cor ao passar o mouse */
+}
+
+
+:root {
+    --seta-e: url('Imagens/Flecha Esquerda.png');
+    --seta-d: url('Imagens/Flecha Direita.png');
+}
+
+.seta-e {
+    content: var(--seta-e);
+}
+
+.seta-d {
+    content: var(--seta-d);
+}
+
+.setas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: -25px;
+    gap: 5px;
+    align-content: center;
+}
+
+a{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+    --s-azul-es: url('Imagens/s-azul-es.svg');
+    --s-azul-di: url('Imagens/s-azul-direita.svg');
+}
+
+.s-azul-di{
+    content: var(--s-azul-di);
+}
+
+.s-azul-es{
+    content: var(--s-azul-es);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .form {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .logo img {
+        width: 200px;
+        margin-left: 0;
+    }
+
+    .marques {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .checkbox-block {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .uploads {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-box-fa input, .input-group-ex input {
+        width: 100%;
+    }
+
+    .input-group-CM textarea {
+        width: 100%;
+    }
+
+    .input-group-CEP {
+        margin-left: 0;
+    }
+}
+
+#carteiraTrabalho{
+    display: flex;
+    justify-content: center;
+    margin-left: -150px;
+}
+
+#comprovanteEscolaridade{
+    display: flex;
+    justify-content: center;
+    margin-left: -190px;
+}
+
+#confirmButton {
+    background: transparent;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-top: -1px;
+}

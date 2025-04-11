@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('Imagens/BackGround.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    width: 300px;
+    margin-left: 120px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 320px;
+    color: white;
+    font-weight: bold;
+}
+
+.botoes {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.botao-esquerda {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botao-direita {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+    transition: background 0.3s;
+}
+
+.botao-direita {
+    background-color: transparent;
+}
+
+.botao-direita::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: transparent;
+    transition: left 0.4s;
+}
+
+.botao-direita:hover::after {
+    left: 100%;
+}
+
+.botao-esquerda {
+    background-color: transparent;
+}
+
+.botao-esquerda::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background: transparent;
+    transition: right 0.4s;
+}
+
+.botao-esquerda:hover::after {
+    right: 100%;
+}
+
+.aceito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+a {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    gap: 20px;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2135A6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.checkbox-custom::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: #F3541C;
+    border-color: #F3541C;
+}
+
+input[type="checkbox"]:checked + .checkbox-custom::after {
+    display: block;
+}
+
+.checkbox-label:hover .checkbox-custom {
+    border-color: #F3541C;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .botoes {
+        gap: 2rem; /* Ajusta o espaço entre os botões */
+    }
+
+    .botao-esquerda, .botao-direita {
+        flex-direction: column; /* Empilha os ícones e texto em telas menores */
+        gap: 0.5rem;
+    }
+
+    .logo img {
+        width: 250px; /* Reduz o tamanho do logo */
+        margin-left: 0;
+    }
+
+    .conteudo {
+        margin-top: 150px; /* Ajusta o espaço superior para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        margin-top: 120px; /* Ajuste para telas menores */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .botoes {
+        flex-direction: column; /* Empilha os botões */
+        gap: 2rem; /* Ajusta o espaço entre os botões */
+        align-items: center;
+    }
+
+    .botao-esquerda, .botao-direita {
+        width: 100%; /* Botões ocupam a largura total */
+        justify-content: center;
+    }
+
+    .aceito {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .checkbox-label {
+        font-size: 14px;
+        gap: 10px; /* Ajusta o espaço entre o texto e a checkbox */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 200px; /* Diminui o logo em telas pequenas */
+    }
+
+    .conteudo {
+        margin-top: 100px; /* Ajuste para telas pequenas */
+    }
+
+    .botoes {
+        flex-direction: column; /* Empilha os botões em telas muito pequenas */
+        gap: 1rem;
+    }
+
+    .botao-esquerda, .botao-direita {
+        width: 100%; /* Botões ocupam a largura total */
+    }
+
+    .checkbox-label {
+        font-size: 12px;
+        gap: 8px; /* Ajuste do espaço na checkbox */
+    }
+
+    .checkbox-custom {
+        width: 18px;
+        height: 18px; /* Reduz o tamanho da checkbox */
+    }
+}
+
+#botaoSim {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+/* Botão SIM - desabilitado */
+#botaoSim:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#botaoNao {
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}

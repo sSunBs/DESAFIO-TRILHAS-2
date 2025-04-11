@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="icon" type="image/svg" href="Imagens/Trilhas icon.svg">
+    <title>Registro Básico - Trilhas</title>
+</head>
+
+<body>
+<header>
+    <div class="interface">
+        <section class="logo">
+            <img src="Imagens/Logo%20-%20header.svg" alt="Logo do Trilhas azul e laranja">
+        </section>
+    </div>
+</header>
+
+<div class="container">
+    <div class="form-image">
+        <img src="Imagens/Boneco.svg" alt="Boneco de trilha">
+    </div>
+    <div class="form">
+        <form id="registroForm">
+
+            <div class="form-tittle">
+                <img class="s-azul-es">
+                <h2>REGISTRO DE USUÁRIO</h2>
+                <img class="s-azul-di">
+            </div>
+
+            <div id="formError" style="color: red; display: none; margin-top: 10px;">
+                Por favor, preencha todos os campos !
+            </div>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="nomecompleto">Nome Completo</label>
+                    <input id="nomecompleto" type="text" name="nomecompleto" placeholder="Digite seu nome completo" required>
+                    <small id="nomeError" style="color: red; display: none;">O nome não pode conter números!</small>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    <small id="emailError" style="color: red; display: none;">Por favor, insira um email válido!</small>
+
+                </div>
+
+                <section class="idctt">
+                    <div class="input-box-sec">
+                        <label for="documentodeidentificacao">Documento de Identificação</label>
+                        <input id="documentodeidentificacao" type="number" name="documento" placeholder="Somente Números - CPF" required>
+                    </div>
+
+                    <div class="input-box-sec">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="number" name="telefone" placeholder="Digite seu telefone" required>
+                    </div>
+                </section>
+
+                <section class="cidade">
+                    <div class="input-box-tec">
+                        <label for="Cep">CEP</label>
+                        <input id="cep" type="number" name="cep" placeholder="Somente Números" required>
+                    </div>
+
+                    <div class="input-box-tec">
+                        <label for="endereco">Endereço</label>
+                        <input id="endereco" type="text" name="endereco" placeholder="Digite seu endereço" required>
+                    </div>
+                </section>
+
+                <section class="password">
+                    <div class="input-box-qua">
+                        <label for="senha">Senha:</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box-qua">
+                        <label for="confirmar-senha">Confirmar Senha:</label>
+                        <input id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                    </div>
+                </section>
+            </div>
+
+            <div class="setas">
+                <img class="seta-e">
+                <button type="button" id="confirmButton" disabled onclick="redirecionarPagina()">CONFIRMAR</button>
+                <img class="seta-d">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="registro.js"></script>
+</body>
+
+</html>
